@@ -1,0 +1,94 @@
+
+.weather-panel {
+  display: flex;
+  flex-direction: column;
+  background: gray;
+  width: 80%;
+  height: 100%;
+  padding: 10px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .location {
+      display: flex;
+      flex-direction: column;
+
+      .city {
+        font-size: 30px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .updated-on {
+        font-size: 10px;
+        color: whitesmoke;
+      }
+    }
+
+    .saved-to-msg {
+      right: 0;
+      margin: 13px 10px 0px 200px;
+      font-size: 20px;
+      color: whitesmoke;
+    }
+  }
+
+  .body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .part-1 {
+      display: flex;
+      flex-direction: column;
+
+      .current-temp-container {
+        display: flex;
+  
+        .current-temp {
+          color: yellow;
+          font-size: 80px;
+          font-weight: 400;
+        }
+  
+        .feels-like {
+          color: whitesmoke;
+          margin: 53px 10px 0 10px;
+          font-size: 10px;
+        }
+  
+        .feels-like-temp {
+          color: whitesmoke;
+          font-size: 30px;
+          margin-top: 47px;
+        }
+      }
+
+      .description {
+        color: white;
+      }
+    }
+    
+    .part-2 {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .day-card {
+        display: flex;
+    
+        margin-right: 10px;
+      }
+    }
+    
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .weather-panel {
+    width: 100%;
+  }
+}

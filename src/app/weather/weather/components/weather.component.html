@@ -1,0 +1,44 @@
+<div>
+    <div class="weather-panel">
+        <div class="header">
+            <div class="location">
+                <div class="city">{{ location.city }}, {{ location.province }} Weather</div>
+                <div class="updated-on">Updated on {{ location.timestamp }}</div>
+            </div>
+
+            <div class="saved-to-msg">
+                SAVED TO MY LOCATION
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="part-1">
+                <div class="current-temp-container">
+                    <div class="current-temp">{{ location.temp }}</div>
+                    <div class="feels-like">
+                        <div>FEELS</div>
+                        <div>LIKE</div>
+                    </div>
+                    <div class="feels-like-temp ">{{ location.feelsLike }}</div>
+                </div>
+
+                <div class="description"> {{ location.weatherDesc }} </div>
+            </div>
+
+            <div class="part-2">
+                <div class="day-card" *ngFor="let day of location?.days">
+                    <wdsk-weather-card 
+                        [currentTemp] = "day?.currentTemp"
+                        [feelsLikeTemp] = "day?.feelsLikeTemp"
+                        [day] = "day?.day"
+                        [type] = "day?.type"
+                        [picUrl] = "day?.picUrl">
+                    </wdsk-weather-card>
+                </div>
+            </div>
+
+            
+        </div>
+
+    </div>
+</div>
